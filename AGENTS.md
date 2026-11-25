@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## App architecture
+- Keep ledger calculations, transitions and seed orders in a browser-safe domain module; pure functions make payout and milestone rules testable.
+- Load and persist browser state only after hydration; this preserves matching server and initial browser renders.
+- Use the global stylesheet for semantic visual tokens and reusable layouts; route components consume the design system.
