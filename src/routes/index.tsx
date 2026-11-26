@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import okuuLogo from "@/assets/okuu-cyber-logo.png.asset.json";
+import lipahubMark from "@/assets/lipahub-mark.png.asset.json";
 import { advance, categories, locations, money, receiptText, sampleOrders, split, totals, type Order, type Status } from "@/lib/ledger";
 import tote from "@/assets/tote.webp.asset.json";
 import basket from "@/assets/basket.webp.asset.json";
@@ -83,7 +84,7 @@ function Index() {
   return (
     <div>
       <header className="app-header"><div className="header-inner">
-        <div className="flex items-center gap-3"><div className="brand-mark"><HandCoins strokeWidth={1.7}/></div><div><div className="brand-name">LipaHub <span className="font-medium">Kalobeyei</span></div><div className="brand-tagline">Local trade. Shared trust. Stronger community.</div></div></div>
+        <div className="flex items-center gap-3"><img src={lipahubMark.url} alt="LipaHub Kalobeyei logo" className="brand-mark"/><div><div className="brand-name">LipaHub <span className="font-medium">Kalobeyei</span></div><div className="brand-tagline">Local trade. Shared trust. Stronger community.</div></div></div>
         <div className="flex items-center gap-5"><div className="partner"><img src={okuuLogo.url} alt="Okuu Cyber logo" className="partner-logo"/><div><div className="text-[9px] text-muted-foreground">POWERED BY</div><div className="text-xs font-bold">Okuu Cyber</div></div></div><span className="flex items-center gap-1.5 text-[10px] text-muted-foreground"><span className="size-1.5 rounded-full bg-primary"/> Saved on this device</span><Button className="new-order" onClick={() => setNewOrder(true)} aria-label="New Order"><Plus/><span className="new-order-label">New Order</span></Button></div>
       </div></header>
       <main className="shell">
